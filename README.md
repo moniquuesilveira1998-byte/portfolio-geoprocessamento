@@ -56,5 +56,5 @@ Busco oportunidades de iniciação, estágio, voluntariado e desenvolvimento tec
 
 ---
 
-📍 Pará, Brasil  
-🎓 Universidade Federal do Pará — Geoprocessamento
+ Pará, Brasil  
+ Universidade Federal do Pará — Geoprocessamento
