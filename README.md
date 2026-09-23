@@ -1,4 +1,4 @@
-Monique Silveira Balouta 👋
+Monique Silveira Balouta 
 
  Graduanda em Geoprocessamento — Universidade Federal do Pará (UFPA)
 
