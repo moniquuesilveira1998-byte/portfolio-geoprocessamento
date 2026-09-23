@@ -32,9 +32,9 @@ Também tenho interesse em desenvolvimento tecnológico e em ampliar meus conhec
 - Google Earth
 - Git / GitHub
 
-## 📚 Projetos acadêmicos
+##  Projetos acadêmicos
 
-### 🗺️ Produção cartográfica
+### Produção cartográfica
 
 Mapas temáticos e análises espaciais desenvolvidos no contexto da graduação em Geoprocessamento.
 
