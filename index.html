@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monique Silveira | Portfólio de Geoprocessamento</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f6;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        /* MENU */
+
+        header {
+            background: #12372a;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8fd694;
+        }
+
+        /* INÍCIO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+
+            background:
+                linear-gradient(rgba(18,55,42,0.88), rgba(18,55,42,0.88)),
+                linear-gradient(135deg, #1b5e20, #2e7d32);
+            
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            font-weight: normal;
+            color: #b9e4c9;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 35px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #70c174;
+            color: #10251c;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-3px);
+            background: #9be3a0;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .titulo h2 {
+            font-size: 36px;
+            color: #174b35;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            color: #607d70;
+        }
+
+        /* SOBRE */
+
+        .sobre {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .sobre-texto h3 {
+            font-size: 27px;
+            color: #174b35;
+            margin-bottom: 20px;
+        }
+
+        .sobre-texto p {
+            margin-bottom: 15px;
+        }
+
+        .caixa-destaque {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 6px solid #3f8f55;
+        }
+
+        .caixa-destaque h3 {
+            color: #174b35;
+            margin-bottom: 15px;
+        }
+
+        /* HABILIDADES */
+
+        .habilidades {
+            background: #eaf2ed;
+            max-width: none;
+        }
+
+        .habilidades-conteudo {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .icone {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #174b35;
+            margin-bottom: 10px;
+        }
+
+        /* PROJETOS */
+
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .projeto {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .projeto:hover {
+            transform: translateY(-5px);
+        }
+
+        .projeto-topo {
+            background: #1b5e20;
+            color: white;
+            padding: 35px;
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .projeto-conteudo {
+            padding: 25px;
+        }
+
+        .projeto h3 {
+            color: #174b35;
+            margin-bottom: 12px;
+        }
+
+        .projeto p {
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dceee1;
+            color: #245c38;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 13px;
+            margin: 3px;
+        }
+
+        /* FORMAÇÃO */
+
+        .formacao {
+            background: #f0f5f2;
+            max-width: none;
+        }
+
+        .formacao-conteudo {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        .linha {
+            border-left: 4px solid #3f8f55;
+            padding-left: 25px;
+        }
+
+        .item-formacao {
+            background: white;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .item-formacao h3 {
+            color: #174b35;
+        }
+
+        /* CONTATO */
+
+        .contato {
+            text-align: center;
+        }
+
+        .contato-box {
+            background: #12372a;
+            color: white;
+            padding: 45px;
+            border-radius: 20px;
+        }
+
+        .contato-box h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .contato-box p {
+            margin-bottom: 25px;
+        }
+
+        .contato-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contato-links a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid #9be3a0;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        .contato-links a:hover {
+            background: #70c174;
+            color: #12372a;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #0b2118;
+            color: #c8d8cf;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .sobre {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .projetos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                Monique Silveira
+            </div>
+
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- INÍCIO -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>Monique Silveira</h1>
+
+            <h2>Portfólio de Geoprocessamento</h2>
+
+            <p>
+                Estudante de Geoprocessamento com interesse em
+                cartografia, geotecnologias, meio ambiente,
+                sensoriamento remoto e mapeamento com VANTs.
+            </p>
+
+            <a href="#projetos" class="botao">
+                Conheça meus projetos
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="sobre">
+
+        <div class="titulo">
+
+            <h2>Sobre mim</h2>
+
+            <p>
+                Conheça um pouco da minha trajetória acadêmica.
+            </p>
+
+        </div>
+
+        <div class="sobre">
+
+            <div class="sobre-texto">
+
+                <h3>Olá! Eu sou Monique.</h3>
+
+                <p>
+                    Sou estudante de Geoprocessamento e tenho
+                    interesse em tecnologias voltadas para análise
+                    espacial, cartografia e meio ambiente.
+                </p>
+
+                <p>
+                    Durante minha formação, venho desenvolvendo
+                    conhecimentos relacionados ao uso de Sistemas
+                    de Informação Geográfica, produção de mapas,
+                    sensoriamento remoto e análise de dados
+                    geoespaciais.
+                </p>
+
+                <p>
+                    Também tenho interesse em mapeamento com VANTs,
+                    geotecnologias aplicadas à Amazônia e produção
+                    de informações que contribuam para pesquisas
+                    ambientais e territoriais.
+                </p>
+
+            </div>
+
+            <div class="caixa-destaque">
+
+                <h3>Áreas de interesse</h3>
+
+                <p> Cartografia e representação espacial</p>
+
+                <p> Amazônia e meio ambiente</p>
+
+                <p> Sensoriamento remoto</p>
+
+                <p> Geoprocessamento</p>
+
+                <p> VANTs e mapeamento aéreo</p>
+
+                <p>Análise e visualização de dados</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HABILIDADES -->
+
+    <div class="habilidades" id="habilidades">
+
+        <div class="habilidades-conteudo">
+
+            <section>
+
+                <div class="titulo">
+
+                    <h2>Habilidades</h2>
+
+                    <p>
+                        Ferramentas e áreas que fazem parte da minha formação.
+                    </p>
+
+                </div>
+
+                <div class="cards">
+
+                    <div class="card">
+
+                        <div class="icone">🗺️</div>
+
+                        <h3>QGIS</h3>
+
+                        <p>
+                            Produção de mapas, organização de dados
+                            geoespaciais e análise espacial.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="icone"></div>
+
+                        <h3>Cartografia</h3>
+
+                        <p>
+                            Elaboração e interpretação de mapas
+                            e representação do espaço geográfico.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="icone">🛰️</div>
+
+                        <h3>Sensoriamento Remoto</h3>
+
+                        <p>
+                            Utilização de imagens e informações
+                            obtidas por sensores para análise territorial.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="icone"></div>
+
+                        <h3>VANTs / Drones</h3>
+
+                        <p>
+                            Interesse em levantamento aéreo,
+                            fotogrametria e mapeamento.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="icone"></div>
+
+                        <h3>Power BI</h3>
+
+                        <p>
+                            Interesse em dashboards, gráficos,
+                            mapas e visualização de dados.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="icone"></div>
+
+                        <h3>Geotecnologias</h3>
+
+                        <p>
+                            Aplicação de tecnologias digitais
+                            para análise e representação espacial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJETOS -->
+
+    <section id="projetos">
+
+        <div class="titulo">
+
+            <h2>Projetos</h2>
+
+            <p>
+                Trabalhos e atividades desenvolvidos durante minha formação.
+            </p>
+
+        </div>
+
+
+        <div class="projetos">
+
+
+            <div class="projeto">
+
+                <div class="projeto-topo">
+                    🗺️
+                </div>
+
+                <div class="projeto-conteudo">
+
+                    <h3>Mapeamento Geográfico</h3>
+
+                    <p>
+                        Desenvolvimento de mapas temáticos e
+                        representação de informações espaciais
+                        utilizando ferramentas de geoprocessamento.
+                    </p>
+
+                    <span class="tag">QGIS</span>
+                    <span class="tag">Cartografia</span>
+                    <span class="tag">Mapas</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <div class="projeto-topo">
+                    🚁
+                </div>
+
+                <div class="projeto-conteudo">
+
+                    <h3>Mapeamento com VANTs</h3>
+
+                    <p>
+                        Estudos relacionados ao uso de drones,
+                        levantamento aéreo, fotogrametria e
+                        produção de informações geoespaciais.
+                    </p>
+
+                    <span class="tag">VANT</span>
+                    <span class="tag">Fotogrametria</span>
+                    <span class="tag">Mapeamento</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <div class="projeto-topo">
+                    
+                </div>
+
+                <div class="projeto-conteudo">
+
+                    <h3>Dashboard Geográfico</h3>
+
+                    <p>
+                        Desenvolvimento de ideias para integração
+                        de mapas, gráficos e informações espaciais
+                        em painéis interativos.
+                    </p>
+
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Dados</span>
+                    <span class="tag">Mapas</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <div class="projeto-topo">
+                    🌳
+                </div>
+
+                <div class="projeto-conteudo">
+
+                    <h3>Geoprocessamento e Meio Ambiente</h3>
+
+                    <p>
+                        Aplicação das geotecnologias na análise
+                        ambiental e territorial, com interesse
+                        especial na região amazônica.
+                    </p>
+
+                    <span class="tag">Amazônia</span>
+                    <span class="tag">Meio Ambiente</span>
+                    <span class="tag">Geoprocessamento</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FORMAÇÃO -->
+
+    <div class="formacao" id="formacao">
+
+        <div class="formacao-conteudo">
+
+            <section>
+
+                <div class="titulo">
+
+                    <h2>Formação e desenvolvimento</h2>
+
+                    <p>
+                        Minha trajetória acadêmica e áreas de aprendizado.
+                    </p>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div class="item-formacao">
+
+                        <h3> Geoprocessamento</h3>
+
+                        <p>
+                            Formação acadêmica na área de
+                            Geoprocessamento, com desenvolvimento
+                            de conhecimentos em cartografia,
+                            geotecnologias e análise espacial.
+                        </p>
+
+                    </div>
+
+
+                    <div class="item-formacao">
+
+                        <h3> Cartografia e SIG</h3>
+
+                        <p>
+                            Estudos relacionados à produção,
+                            interpretação e organização de dados
+                            cartográficos e geoespaciais.
+                        </p>
+
+                    </div>
+
+
+                    <div class="item-formacao">
+
+                        <h3>🛰️ Sensoriamento Remoto</h3>
+
+                        <p>
+                            Estudos sobre imagens e técnicas de
+                            sensoriamento remoto aplicadas à análise
+                            do território.
+                        </p>
+
+                    </div>
+
+
+                    <div class="item-formacao">
+
+                        <h3> Fotogrametria e VANTs</h3>
+
+                        <p>
+                            Aprendizado sobre drones, levantamento
+                            aéreo e técnicas de mapeamento.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato" class="contato">
+
+        <div class="contato-box">
+
+            <h2>Vamos conectar?</h2>
+
+            <p>
+                Este portfólio reúne parte dos meus estudos,
+                interesses e projetos na área de Geoprocessamento.
+            </p>
+
+            <div class="contato-links">
+
+                <a href="mailto:seuemail@email.com">
+                    📧 E-mail
+                </a>
+
+                <a href="https://github.com/moniquesilveira1998-byte"
+                   target="_blank">
+                    💻 GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            © 2026 Monique Silveira — Portfólio de Geoprocessamento
+        </p>
+
+        <p>
+            Cartografia • Geoprocessamento • Sensoriamento Remoto • VANTs
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
